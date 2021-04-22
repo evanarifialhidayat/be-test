@@ -7,8 +7,7 @@ import java.io.File;
 
 public class Main{
     public static void main(final String[] array) {
-    	//recipeChecker.bat fruitList.txt " APPLE PIE "
-    	
+        	
         if (array.length == 0) {
             System.out.println("ERROR: Missing program argument for input file path. Usage: java -cp . Main <file>");
             return;
@@ -23,7 +22,7 @@ public class Main{
             return;
         }
         try {
-            final List sortedList = new SinarmasCafeB().getSortedList((List)Files.readAllLines(file.toPath(), StandardCharsets.UTF_8),array[1],array[1]);
+            final List sortedList = new SinarmasCafeB().getSortedList((List)Files.readAllLines(file.toPath(), StandardCharsets.UTF_8),array[1],array[2]);
             if (sortedList != null) {
                 final Iterator<String> iterator = sortedList.iterator();
                 while (iterator.hasNext()) {
